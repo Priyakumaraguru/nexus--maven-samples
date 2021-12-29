@@ -146,14 +146,14 @@ under the License.
      | Specifies a repository mirror site to use instead of a given repository. The repository that
      | this mirror serves has an ID that matches the mirrorOf element of this mirror. IDs are used
      | for inheritance and direct lookup purposes, and must be unique across the set of mirrors.
-     |
+     | -->
     <mirror>
-      <id>mirrorId</id>
-      <mirrorOf>repositoryId</mirrorOf>
-      <name>Human Readable Name for this Mirror.</name>
-      <url>http://my.repository.com/repo/path</url>
+      <id>nexusdeploymentrepo</id>
+      <mirrorOf>*</mirrorOf>
+      <name>nexus-maven-contral</name>
+      <url>http://34.125.147.30:8081/repository/maven-central</url>
     </mirror>
-     -->
+     
   </mirrors>
 
   <!-- profiles
@@ -247,7 +247,7 @@ under the License.
        <repository>
          <id>nexus-snapshot-repo</id>
          <name>your custom repo</name>
-         <url>http://35.188.22.253:8081/repository/maven-snapshots/</url>
+         <url>http://34.125.147.30:8081/repository/maven-snapshots/</url>
        </repository>
 	   
      </repositories>
@@ -258,7 +258,7 @@ under the License.
        <repository>
          <id>nexus-release-repo</id>
          <name>your custom repo</name>
-         <url>http://35.202.104.9:8081/repository/maven-releases/</url>
+         <url>http://34.125.147.30:8081/repository/maven-releases/</url>
        </repository>
      </repositories>
    </profile>
